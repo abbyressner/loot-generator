@@ -7,7 +7,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Monster {
+
     private String name;
+    
     private String trClass;
 
     public Monster(String name, String trClass) {
@@ -25,8 +27,9 @@ public class Monster {
 
     /**
      * Load every monster from a given file.
-     * @param filePath path to monstats.txt
+     * @param fp the file path
      * @return a list of monster objects
+     * @throws FileNotFoundException if the file is not found
      */
     public static List<Monster> loadMonsters(String fp) throws FileNotFoundException {
         List<Monster> monsters = new ArrayList<>();

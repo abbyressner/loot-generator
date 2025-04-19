@@ -20,9 +20,25 @@ public class Affix {
         this.mod1max = mod1max;
     }
 
-    public int generateAffixStats(Affix affix) {
+    public int generateAffixStat(Affix affix) {
         Random random = new Random();
         return random.nextInt(affix.mod1max - affix.mod1min + 1) + affix.mod1min;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getMod1Code() {
+        return mod1code;
+    }
+
+    public int getMod1Min() {
+        return mod1min;
+    }
+
+    public int getMod1Max() {
+        return mod1max;
     }
 
     public static List<Affix> loadAffixes(String fp) throws FileNotFoundException {

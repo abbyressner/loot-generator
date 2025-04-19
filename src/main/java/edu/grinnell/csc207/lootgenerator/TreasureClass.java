@@ -27,7 +27,7 @@ public class TreasureClass {
         this.drop3 = drop3;
     }
 
-    public String getDrop(int dropNum) { 
+    private String getDrop(int dropNum) { 
         switch (dropNum) {
             case 1:
                 return drop1;
@@ -46,7 +46,7 @@ public class TreasureClass {
         return getDrop(dropNum);
     }
 
-    public static Map<String, TreasureClass> loadTreasureClasses(String fp) throws FileNotFoundException {
+    public static Map<String, TreasureClass> loadTCs(String fp) throws FileNotFoundException {
         Map<String, TreasureClass> map = new HashMap<>();
         try (Scanner scanner = new Scanner(new File(fp))) {
             while (scanner.hasNextLine()) {

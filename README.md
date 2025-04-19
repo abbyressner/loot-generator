@@ -1,13 +1,16 @@
 # Project: Loot Generator
 
-Authors: (_TODO: fill in names here!_)
+Authors: Abby Ressner
 
 ## Resources
 
-*   (_TODO: fill in resources here!_)
-*   ...
-*   ...
+* Java SE 21.0.6
+* Apache Maven 3.9.9
+* Visual Studio Code
+* Professor Osera's Loot Generator starter code
+* Diablo II Wiki – Treasure Classes – for the procedural loot algorithm
+* Java API: java.util.Scanner – for file and console I/O
 
 ## Revision Log
 
-*   (_TODO: fill in your changes to your project here!_)
+* (_TODO: fill in your changes to your project here!_)

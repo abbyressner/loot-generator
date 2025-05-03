@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * A treasure class whose drops are stored in a fixed‐length array.
+ * TreasureClass class.
  */
 public class TreasureClass {
 
@@ -20,8 +20,16 @@ public class TreasureClass {
 
     private final String drop3;
 
+    /**
+     * Constructor for TreasureClass.
+     *
+     * @param name  the name of the treasure class
+     * @param drop1 the first drop item
+     * @param drop2 the second drop item
+     * @param drop3 the third drop item
+     */
     public TreasureClass(String name, String drop1, String drop2, String drop3) {
-        this.name  = name;
+        this.name = name;
         this.drop1 = drop1;
         this.drop2 = drop2;
         this.drop3 = drop3;
@@ -40,12 +48,23 @@ public class TreasureClass {
         }
     }
 
+    /**
+     * Generates a random drop item.
+     *
+     * @return the name of the drop item
+     */
     public String getRandomDrop() {
         Random random = new Random();
         int dropNum = random.nextInt(3) + 1;
         return getDrop(dropNum);
     }
 
+    /**
+     * Returns the treasure classes.
+     * 
+     * @param fp the file path
+     * @return the map of treasure classes
+     */
     public static Map<String, TreasureClass> loadTCs(String fp) throws FileNotFoundException {
         Map<String, TreasureClass> map = new HashMap<>();
         try (Scanner scanner = new Scanner(new File(fp))) {

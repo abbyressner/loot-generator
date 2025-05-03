@@ -7,6 +7,9 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Armor class.
+ */
 public class Armor {
 
     private final String name;
@@ -46,12 +49,21 @@ public class Armor {
         return random.nextInt(maxac - minac + 1) + minac;
     }
 
+    /**
+     * Load armor from a given file.
+     *
+     * @param fp the file path
+     * @return a map of armor objects
+     * @throws FileNotFoundException if the file is not found
+     */
     public static Map<String, Armor> loadArmor(String fp) throws FileNotFoundException {
         Map<String, Armor> armorMap = new HashMap<>();
         try (Scanner scanner = new Scanner(new File(fp))) {
             while (scanner.hasNextLine()) {
                 String[] data = scanner.nextLine().trim().split("\t");
-                armorMap.put(data[0], new Armor(data[0], Integer.parseInt(data[1]), Integer.parseInt(data[2])));
+                armorMap.put(data[0], new Armor(data[0], 
+                                                Integer.parseInt(data[1]), 
+                                                Integer.parseInt(data[2])));
             }
             scanner.close();
         }

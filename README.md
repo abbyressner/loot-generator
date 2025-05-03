@@ -13,4 +13,10 @@ Authors: Abby Ressner
 
 ## Revision Log
 
-* (_TODO: fill in your changes to your project here!_)
+### Grader comments
+
+*For an E, fix the style violations (29). You can get a list of them with the command mvn checkstyle:check. Keep up the good work!*
+
+### Changes made
+
+* resolved all checkstyle violations in Affix.java, LootGenerator.java, TreasureClass.java, Monster.java, and Armor.java
